@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JavaScript cviceni</title>  
+</head>
+<body>   
+  <h1>Objednávkový formulář</h1>  
+  <form name="form1">
+    <!-- Checkboxy -->
+    <div>
+      <label for="check1"></label>
+      <input type="checkbox" id="check1" name="checkname1" value="500" /> horské 500 Kč/den
+      <label for="qty1"></label>
+      <input type="number" id="qty1" name="qtyname1" value="1" min="1">
+    </div>
+    <div>
+      <label for="check2"></label>
+      <input type="checkbox" id="check2" name="checkname2" value="200" /> dětské  200 Kč/den
+      <label for="qty2"></label>
+      <input type="number" id="qty2" name="qtyname2" value="1" min="1">
+    </div>
+    <div>
+      <label for="check1"></label>
+      <input type="checkbox" id="check3" name="checkname3" value="1500" /> silniční 1 500 Kč/den
+      <label for="qty3"></label>
+      <input type="number" id="qty3" name="qtyname3" value="1" min="1">
+    </div>
+    <div>
+      <label for="check4"></label>
+      <input type="checkbox" id="check4" name="checkname4" value="2500" /> gravel  2 500 Kč/den
+      <label for="qty4"></label>
+      <input type="number" id="qty4" name="qtyname4" value="1" min="1">
+    </div>
+    <!-- Roleta -->
+    <div>
+      <select name="days">
+        <option value="5">5 dní</option>
+        <option value="7">týden</option>
+        <option value="14">14 dní</option>
+        <option value="30">měsíc</option>
+      </select>
+    </div>
+    <!-- Radio -->
+    <div>
+      <label for="radio1"></label>
+      <input type="radio" id="radio1" name="radioname" value="1.05" /> cyklonosič střešní +5 procent celkové ceny zápůjčky navíc     
+    </div>
+    <div>
+      <label for="radio2"></label>
+      <input type="radio" id="radio2" name="radioname" value="1.1" /> cyklonosič na tažné zařízení + 10 procent z celkové ceny zápůjčky navíc      
+    </div>
+    <div>
+      <label for="radio3"></label>
+      <input type="radio" id="radio3" name="radioname" value="1" checked /> není třeba cyklonosič      
+    </div>
+    <!-- Výpočet -->    
+    <div>
+      <button type="button" name="btn1" onClick="vysledek();">Výpočet celkem</button>      
+      <label for="suma"></label>
+      <input type="text" id="suma" name="sumname">                  
+    </div>
+    <div>
+      <label for="limit">Maximální částka: </label>
+      <input type="number" id="limit" name="limitname" min="0" step="1000"/>      
+    </div>
+    <div>
+      <label for="control">Kontrola: </label>
+      <input type="text" id="control" name="controlname">
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="emailname" value="">      
+    </div>
+    <!-- Odeslat -->
+    <div>
+      <button name="btn2" onClick="emailCheck();">ODESLAT</button>
+    </div>
+  </form>
+  <script src="mujscript.js"></script>
+</body>
+</html>
